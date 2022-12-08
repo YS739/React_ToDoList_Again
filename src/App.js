@@ -16,8 +16,8 @@ import ToDoList from "./components/toDoList/ToDoList";
 
 const App = () => {
   const [toDoS, setToDoS] = useState([
-    { id: 1, title: "리액트", content: "리액트 과제 다시 하기", isDone: false },
-    { id: 2, title: "독서", content: "IT책 10장 읽기", isDone: true },
+    { id: 0, title: "리액트", content: "리액트 과제 다시 하기", isDone: false },
+    { id: 1, title: "독서", content: "IT책 10장 읽기", isDone: true },
   ]);
 
   const [title, setTitle] = useState("");
@@ -44,10 +44,12 @@ const App = () => {
   };
 
   // 완료, 취소 버튼 눌렀을 때
-  const switchList = (e) => {
-    const eventId = Number(e.target.id);
+  const switchList = (toDos) => {
+    const clickId = toDos.id;
+    console.log(clickId);
     const newToDoList = [...toDoS];
-    newToDoList[eventId].isDone = !newToDoList[eventId].isDone;
+
+    newToDoList[clickId].isDone = !newToDoList[clickId].isDone;
 
     setToDoS(newToDoList);
   };
@@ -71,12 +73,9 @@ const App = () => {
             return (
               <ToDoList
                 toDo={toDo}
-                title={toDo.title}
-                content={toDo.content}
-                isDone={toDo.isDone}
                 key={toDo.id}
                 deleteHandle={deleteToDo}
-                switchList={switchList}
+                switchHandle={switchList}
               ></ToDoList>
             );
           }
@@ -88,12 +87,9 @@ const App = () => {
             return (
               <ToDoList
                 toDo={toDo}
-                title={toDo.title}
-                content={toDo.content}
-                isDone={toDo.isDone}
                 key={toDo.id}
                 deleteHandle={deleteToDo}
-                switchList={switchList}
+                switchHandle={switchList}
               ></ToDoList>
             );
           }
