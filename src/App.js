@@ -44,14 +44,18 @@ const App = () => {
   };
 
   // 완료, 취소 버튼 눌렀을 때
-  const switchList = (toDos) => {
-    const clickId = toDos.id;
-    console.log(clickId);
-    const newToDoList = [...toDoS];
-
-    newToDoList[clickId].isDone = !newToDoList[clickId].isDone;
-
-    setToDoS(newToDoList);
+  const switchList = (id) => {
+    const switchToDo = toDoS.map((toDo) => {
+      if (toDo.id === id) {
+        return {
+          ...toDo,
+          isDone: !toDo.isDone,
+        };
+      } else {
+        return { ...toDo };
+      }
+    });
+    setToDoS(switchToDo);
   };
 
   return (

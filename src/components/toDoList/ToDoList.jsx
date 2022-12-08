@@ -6,7 +6,7 @@ function ToDoList({ deleteHandle, toDo, switchHandle }) {
       <h2>{toDo.title}</h2>
       <h4>{toDo.content}</h4>
       <button onClick={() => deleteHandle(toDo.id)}>삭제하기</button>
-      <button onClick={() => switchHandle(toDo.isDone)}>
+      <button onClick={() => switchHandle(toDo.id)}>
         {toDo.isDone ? "취소" : "완료"}
       </button>
     </div>
