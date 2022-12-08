@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Header from "./components/header/Header";
 import AddToDo from "./components/addToDo/AddToDo";
-import ToDoList from "./components/toDoList/ToDoList";
+import TodoCards from "./components/todoCards/TodoCards";
 
 // function DoneList({ title, content, isDone }) {
 //   return (
@@ -69,8 +69,12 @@ const App = () => {
         onAddToDoHandler={onAddToDoHandler}
       ></AddToDo>
 
-      {/* <ListSection></ListSection> */}
-      <div>
+      <TodoCards
+        toDoS={toDoS}
+        deleteHandle={deleteToDo}
+        switchHandle={switchList}
+      ></TodoCards>
+      {/* <div>
         <h2>Working...🔥🔥🔥</h2>
         {toDoS.map((toDo) => {
           if (toDo.isDone === false) {
@@ -98,8 +102,7 @@ const App = () => {
             );
           }
         })}
-      </div>
-      {/* 리스트 섹션 */}
+      </div> */}
     </div>
   );
 };

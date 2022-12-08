@@ -1,6 +1,6 @@
 import "./style.css";
 
-function ToDoList({ deleteHandle, toDo, switchHandle }) {
+function ToDoList(toDo, deleteHandle, switchHandle) {
   return (
     <div className="list-box">
       <h2>{toDo.title}</h2>
