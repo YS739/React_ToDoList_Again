@@ -1,29 +1,18 @@
 import React, { useState } from "react";
 import Header from "./components/header/Header";
 import AddToDo from "./components/addToDo/AddToDo";
+import ToDoList from "./components/toDoList/ToDoList";
 
-// workingList component - destructuring
-function WorkingList({ title, content, isDone }) {
-  return (
-    <div className="list-box">
-      <h2>{title}</h2>
-      <h4>{content}</h4>
-      <button>삭제하기</button>
-      <button>{isDone ? "취소" : "완료"}</button>
-    </div>
-  );
-}
-
-function DoneList({ title, content, isDone }) {
-  return (
-    <div className="list-box">
-      <h2>{title}</h2>
-      <h4>{content}</h4>
-      <button>삭제하기</button>
-      <button>{isDone ? "취소" : "완료"}</button>
-    </div>
-  );
-}
+// function DoneList({ title, content, isDone }) {
+//   return (
+//     <div className="list-box">
+//       <h2>{title}</h2>
+//       <h4>{content}</h4>
+//       <button>삭제하기</button>
+//       <button>{isDone ? "취소" : "완료"}</button>
+//     </div>
+//   );
+// }
 
 const App = () => {
   const [toDoS, setToDoS] = useState([
@@ -47,8 +36,21 @@ const App = () => {
     setTitle("");
     setContent("");
   };
-  // 삭제하기 버튼
-  const deleteToDo = (id) => {};
+
+  // 삭제하기 버튼을 눌렀을 때
+  const deleteToDo = (id) => {
+    const newToDoList = toDoS.filter((toDo) => toDo.id != id);
+    setToDoS(newToDoList);
+  };
+
+  // 완료, 취소 버튼 눌렀을 때
+  const switchList = (e) => {
+    const eventId = Number(e.target.id);
+    const newToDoList = [...toDoS];
+    newToDoList[eventId].isDone = !newToDoList[eventId].isDone;
+
+    setToDoS(newToDoList);
+  };
 
   return (
     <div>
@@ -61,18 +63,21 @@ const App = () => {
         onAddToDoHandler={onAddToDoHandler}
       ></AddToDo>
 
+      {/* <ListSection></ListSection> */}
       <div>
         <h2>Working...🔥🔥🔥</h2>
         {toDoS.map((toDo) => {
           if (toDo.isDone === false) {
             return (
-              <WorkingList
+              <ToDoList
                 toDo={toDo}
                 title={toDo.title}
                 content={toDo.content}
                 isDone={toDo.isDone}
                 key={toDo.id}
-              ></WorkingList>
+                deleteHandle={deleteToDo}
+                switchList={switchList}
+              ></ToDoList>
             );
           }
         })}
@@ -81,17 +86,20 @@ const App = () => {
         {toDoS.map((toDo) => {
           if (toDo.isDone === true) {
             return (
-              <DoneList
+              <ToDoList
                 toDo={toDo}
                 title={toDo.title}
                 content={toDo.content}
                 isDone={toDo.isDone}
                 key={toDo.id}
-              ></DoneList>
+                deleteHandle={deleteToDo}
+                switchList={switchList}
+              ></ToDoList>
             );
           }
         })}
       </div>
+      {/* 리스트 섹션 */}
     </div>
   );
 };
