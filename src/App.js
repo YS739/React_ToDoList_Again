@@ -1,18 +1,7 @@
 import React, { useState } from "react";
 import Header from "./components/header/Header";
 import AddToDo from "./components/addToDo/AddToDo";
-import TodoCards from "./components/todoCards/TodoCards";
-
-// function DoneList({ title, content, isDone }) {
-//   return (
-//     <div className="list-box">
-//       <h2>{title}</h2>
-//       <h4>{content}</h4>
-//       <button>삭제하기</button>
-//       <button>{isDone ? "취소" : "완료"}</button>
-//     </div>
-//   );
-// }
+import ToDoBox from "./components/todoBox/ToDoBox";
 
 const App = () => {
   const [toDoS, setToDoS] = useState([
@@ -69,40 +58,11 @@ const App = () => {
         onAddToDoHandler={onAddToDoHandler}
       ></AddToDo>
 
-      <TodoCards
+      <ToDoBox
         toDoS={toDoS}
         deleteHandle={deleteToDo}
         switchHandle={switchList}
-      ></TodoCards>
-      {/* <div>
-        <h2>Working...🔥🔥🔥</h2>
-        {toDoS.map((toDo) => {
-          if (toDo.isDone === false) {
-            return (
-              <ToDoList
-                toDo={toDo}
-                key={toDo.id}
-                deleteHandle={deleteToDo}
-                switchHandle={switchList}
-              ></ToDoList>
-            );
-          }
-        })}
-
-        <h2>Done 🎉🎉🎉</h2>
-        {toDoS.map((toDo) => {
-          if (toDo.isDone === true) {
-            return (
-              <ToDoList
-                toDo={toDo}
-                key={toDo.id}
-                deleteHandle={deleteToDo}
-                switchHandle={switchList}
-              ></ToDoList>
-            );
-          }
-        })}
-      </div> */}
+      ></ToDoBox>
     </div>
   );
 };
