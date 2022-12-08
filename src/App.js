@@ -60,8 +60,11 @@ const App = () => {
 
       <ToDoBox
         toDoS={toDoS}
-        deleteHandle={deleteToDo}
-        switchHandle={switchList}
+        deleteToDo={deleteToDo}
+        switchList={switchList}
+        content={content}
+        title={title}
+        isDone={toDoS.isDone}
       ></ToDoBox>
     </div>
   );
