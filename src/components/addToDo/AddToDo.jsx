@@ -1,6 +1,12 @@
 import "./style.css";
 
-const AddToDo = ({ setTitle, setContent, onAddToDoHandler }) => {
+const AddToDo = ({
+  title,
+  content,
+  setTitle,
+  setContent,
+  onAddToDoHandler,
+}) => {
   const onChangeHandler = (e) => {
     if (e.target.id === "title") {
       setTitle(e.target.value);
@@ -16,14 +22,14 @@ const AddToDo = ({ setTitle, setContent, onAddToDoHandler }) => {
         <input
           placeholder="제목을 입력해주세요"
           id="title"
-          title={setTitle}
+          value={title}
           onChange={onChangeHandler}
         />
         <h3>내용</h3>
         <input
           placeholder="내용을 입력해주세요"
           id="content"
-          content={setContent}
+          value={content}
           onChange={onChangeHandler}
         />
       </div>
