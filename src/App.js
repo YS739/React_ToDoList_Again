@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Header from "./components/header/Header";
-// import AddToDo from "./components/addToDo/AddToDo";
+import AddToDo from "./components/addToDo/AddToDo";
 
 function WorkingList({ title, body }) {
   return (
@@ -16,6 +16,7 @@ function WorkingList({ title, body }) {
 const App = () => {
   const [toDoS, setToDoS] = useState([
     { id: 1, title: "리액트", body: "리액트 과제 다시 하기", isDone: false },
+    { id: 2, title: "독서", body: "IT책 10장 읽기", isDone: false },
   ]);
 
   const [title, setTitle] = useState("");
@@ -38,26 +39,8 @@ const App = () => {
   return (
     <div>
       <Header />
-      {/* <AddToDo></AddToDo> */}
-      <div className="add-todo-box">
-        <div className="input-box">
-          <h3>제목</h3>
-          <input
-            placeholder="제목을 입력해주세요"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-          />
-          <h3>내용</h3>
-          <input
-            placeholder="내용을 입력해주세요"
-            value={body}
-            onChange={(e) => setBody(e.target.value)}
-          />
-        </div>
-        <button onClick={onAddToDoHandler}>추가하기</button>
-      </div>
+      <AddToDo></AddToDo>
 
-      {/* addtodo */}
       <div>
         <h2>Working...🔥🔥🔥</h2>
         {toDoS.map((toDo) => {
