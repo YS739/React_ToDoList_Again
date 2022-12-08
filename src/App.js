@@ -36,7 +36,6 @@ const App = () => {
 
   // 추가하기 버튼을 누르면 새로운 ToDo가 추가
   const onAddToDoHandler = () => {
-    // if (setTitle && setContent) {
     const newToDoS = {
       id: toDoS.length + 1,
       title: title,
@@ -47,11 +46,7 @@ const App = () => {
     // input 초기화
     setTitle("");
     setContent("");
-    // } else {
-    //   alert("제목과 내용을 모두 입력해주세요.");
-    // }
   };
-
   // 삭제하기 버튼
   const deleteToDo = (id) => {};
 
