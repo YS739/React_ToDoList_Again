@@ -1,6 +1,6 @@
 import "./style.css";
 
-const AddToDo = (props) => {
+const AddToDo = ({ title, setTitle, body, setBody, onAddToDoHandler }) => {
   return (
     <div className="add-todo-box">
       <div className="input-box">

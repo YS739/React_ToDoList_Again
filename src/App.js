@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Header from "./components/header/Header";
 import AddToDo from "./components/addToDo/AddToDo";
 
+// workingList component - destructuring
 function WorkingList({ title, body }) {
   return (
     <div className="list-box">
@@ -39,7 +40,13 @@ const App = () => {
   return (
     <div>
       <Header />
-      <AddToDo></AddToDo>
+      <AddToDo
+        title={title}
+        setTitle={setTitle}
+        body={body}
+        setBody={setBody}
+        onAddToDoHandler={onAddToDoHandler}
+      ></AddToDo>
 
       <div>
         <h2>Working...🔥🔥🔥</h2>
