@@ -21,14 +21,16 @@ const App = () => {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
 
+  // 추가하기 버튼을 누르면 새로운 ToDo가 추가
   const onAddToDoHandler = () => {
     const newToDoS = {
       id: toDoS.length + 1,
-      title: { setTitle },
-      body: { setBody },
+      title: title,
+      body: body,
       isDone: false,
     };
     setToDoS([...toDoS, newToDoS]);
+    // input 초기화
     setTitle("");
     setBody("");
   };
@@ -62,8 +64,8 @@ const App = () => {
           return (
             <WorkingList
               toDo={toDo}
-              title={title}
-              body={body}
+              title={toDo.title}
+              body={toDo.body}
               // isDone={isDone}
               key={toDo.id}
             ></WorkingList>
