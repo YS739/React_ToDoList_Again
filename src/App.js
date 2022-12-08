@@ -14,16 +14,23 @@ function WorkingList({ title, body }) {
 }
 
 const App = () => {
-  const toDoS = [
+  const [toDoS, setToDoS] = useState([
     { id: 1, title: "리액트", body: "리액트 과제 다시 하기", isDone: false },
-  ];
+  ]);
 
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
 
-  const onAddListHandler = (e) => {
-    const inputValue = e.target.value;
-    setTitle(inputValue);
+  const onAddToDoHandler = () => {
+    const newToDoS = {
+      id: toDoS.length + 1,
+      title: { setTitle },
+      body: { setBody },
+      isDone: false,
+    };
+    setToDoS([...toDoS, newToDoS]);
+    setTitle("");
+    setBody("");
   };
 
   return (
@@ -32,10 +39,20 @@ const App = () => {
       {/* <AddToDo></AddToDo> */}
       <div className="add-todo-box">
         <div className="input-box">
-          <h3>제목</h3> <input value={title} />
-          <h3>내용</h3> <input value={body} />
+          <h3>제목</h3>
+          <input
+            placeholder="제목을 입력해주세요"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+          />
+          <h3>내용</h3>
+          <input
+            placeholder="내용을 입력해주세요"
+            value={body}
+            onChange={(e) => setBody(e.target.value)}
+          />
         </div>
-        <button>추가하기</button>
+        <button onClick={onAddToDoHandler}>추가하기</button>
       </div>
 
       {/* addtodo */}
