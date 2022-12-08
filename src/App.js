@@ -35,7 +35,7 @@ const App = () => {
   const [content, setContent] = useState("");
 
   // 추가하기 버튼을 누르면 새로운 ToDo가 추가
-  const onAddToDoHandler = (setTitle, setContent) => {
+  const onAddToDoHandler = () => {
     if (setTitle && setContent) {
       const newToDoS = {
         id: toDoS.length + 1,
