@@ -13,8 +13,10 @@ const App = () => {
   const [content, setContent] = useState("");
 
   // 추가하기 버튼을 누르면 새로운 ToDo가 추가
-  const onAddToDoHandler = () => {
-    if (setTitle && setContent) {
+  const onAddToDoHandler = (e) => {
+    // 제목과 내용이 모두 입력되었을 때
+    if (title !== "" && content !== "") {
+      e.preventDefault();
       const newToDoS = {
         id: toDoS.length + 1,
         title: title,
@@ -25,8 +27,24 @@ const App = () => {
       // input 초기화
       setTitle("");
       setContent("");
-    } else {
-      alert("제목과 내용을 모두 입력해주세요.");
+    }
+
+    // 제목과 내용이 모두 비었을 때
+    else if (title === "" && content === "") {
+      e.preventDefault();
+      alert("제목과 내용을 입력해주세요");
+    }
+
+    // 제목이 비었을 때
+    else if (title === "") {
+      e.preventDefault();
+      alert("제목을 입력해주세요");
+    }
+
+    // 내용이 비었을 때
+    else if (content === "") {
+      e.preventDefault();
+      alert("내용을 입력해주세요");
     }
   };
 
