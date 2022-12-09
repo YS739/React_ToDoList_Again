@@ -1,10 +1,15 @@
 .add-todo-box {
   max-width: 1200px;
   min-width: 800px;
+  height: 150px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+
+  background-color: #fff2ff;
+  border: 2px solid #e0bfe8;
+  border-radius: 20px;
 }
 
 .input-box {
@@ -12,4 +17,44 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+.input-box input {
+  padding: 10px;
+  margin: 0 10px;
+
+  border: transparent;
+  border-radius: 20px;
+
+  font-weight: 800;
+}
+
+.input-box input:hover {
+  background-color: #ae8fb6;
+}
+
+.input-box input:focus {
+  background-color: #ae8fb6;
+  color: white;
+}
+
+.input-text {
+  width: 220px;
+}
+
+.add-btn {
+  background-color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 15px;
+  color: black;
+  font-weight: 800;
+
+  cursor: pointer;
+}
+
+.add-btn:hover {
+  background-color: #ae8fb6;
+  color: white;
+  transition: 0.5s;
 }

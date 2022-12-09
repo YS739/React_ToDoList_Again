@@ -1,0 +1,42 @@
+.list-box {
+  width: 230px;
+  height: 160px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  margin-left: 10px;
+
+  background-color: #fff2ff;
+
+  border: 2px solid #e0bfe8;
+  border-radius: 20px;
+}
+
+.content-text {
+  margin-left: 20px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons button {
+  border: none;
+  border-radius: 15px;
+  background-color: #e0bfe8;
+  margin: 0 6px;
+  padding: 5px 7px;
+
+  cursor: pointer;
+}
+
+.buttons button:hover {
+  background-color: #ae8fb6;
+  color: white;
+  transition: 0.5s;
+}

@@ -28,7 +28,7 @@ const App = () => {
 
   // 삭제하기 버튼을 눌렀을 때
   const deleteToDo = (id) => {
-    const newToDoList = toDoS.filter((toDo) => toDo.id != id);
+    const newToDoList = toDoS.filter((toDo) => toDo.id !== id);
     setToDoS(newToDoList);
   };
 

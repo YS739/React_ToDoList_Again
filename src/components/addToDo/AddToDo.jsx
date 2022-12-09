@@ -20,20 +20,23 @@ const AddToDo = ({
       <div className="input-box">
         <h3>제목</h3>
         <input
-          placeholder="제목을 입력해주세요"
+          placeholder="제목을 입력해주세요."
           id="title"
           value={title}
           onChange={onChangeHandler}
         />
         <h3>내용</h3>
         <input
-          placeholder="내용을 입력해주세요"
+          className="input-text"
+          placeholder="내용을 입력해주세요."
           id="content"
           value={content}
           onChange={onChangeHandler}
         />
       </div>
-      <button onClick={onAddToDoHandler}>추가하기</button>
+      <button className="add-btn" onClick={onAddToDoHandler}>
+        추가하기
+      </button>
     </div>
   );
 };
