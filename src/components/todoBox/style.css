@@ -2,9 +2,9 @@
   display: flex;
   flex-direction: row;
   justify-content: left;
-  align-items: left;
+  align-items: center;
 
-  margin: 5px;
+  margin-left: 20px;
 
   flex-wrap: wrap;
 }

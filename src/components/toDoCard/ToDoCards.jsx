@@ -1,6 +1,6 @@
 import "./style.css";
 
-function ToDoCards({ toDo, deleteToDo, switchList }) {
+function ToDoCards({ toDo, deleteToDo, switchList, className }) {
   return (
     <div className="list-box">
       <div className="content-text">

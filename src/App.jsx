@@ -32,18 +32,21 @@ const App = () => {
     // 제목과 내용이 모두 비었을 때
     else if (title === "" && content === "") {
       e.preventDefault();
+      document.querySelector("#title").focus();
       alert("제목과 내용을 입력해주세요");
     }
 
     // 제목이 비었을 때
     else if (title === "") {
       e.preventDefault();
+      document.getElementById("title").focus();
       alert("제목을 입력해주세요");
     }
 
     // 내용이 비었을 때
     else if (content === "") {
       e.preventDefault();
+      document.getElementById("content").focus();
       alert("내용을 입력해주세요");
     }
   };
