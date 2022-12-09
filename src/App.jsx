@@ -50,6 +50,8 @@ const App = () => {
   return (
     <div>
       <Header />
+
+      {/* ToDo 추가하기 */}
       <AddToDo
         title={title}
         setTitle={setTitle}
@@ -58,6 +60,7 @@ const App = () => {
         onAddToDoHandler={onAddToDoHandler}
       ></AddToDo>
 
+      {/* 추가한 ToDoList(Working, Done) */}
       <ToDoBox
         toDoS={toDoS}
         deleteToDo={deleteToDo}

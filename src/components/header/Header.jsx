@@ -1,6 +1,6 @@
 import "./style.css";
 
-function Header(props) {
+function Header() {
   return (
     <div className="header">
       <h1>My ToDo List</h1>

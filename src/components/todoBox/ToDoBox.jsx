@@ -1,13 +1,14 @@
 import "./style.css";
 import ToDoCards from "../toDoCard/ToDoCards";
 
-function ToDoBox({ toDoS, title, content, isDone, deleteToDo, switchList }) {
+function ToDoBox({ toDoS, deleteToDo, switchList }) {
   return (
     <div>
       <h2>Working...🔥🔥🔥</h2>
       {toDoS.map((toDo) => {
         if (toDo.isDone === false) {
           return (
+            // 추가한 ToDo들
             <ToDoCards
               toDo={toDo}
               key={toDo.id}
