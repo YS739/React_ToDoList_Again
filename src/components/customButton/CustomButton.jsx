@@ -15,7 +15,7 @@ const CustomButton = (props) => {
             letterSpacing: "2px",
             cursor: "pointer",
 
-            // hover: "background:'#ae8fb6'",
+            // hover: { background: "black", transition: "0.5s" },
           }}
           onClick={props.onClick}
         >

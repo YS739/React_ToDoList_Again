@@ -28,7 +28,7 @@
 }
 
 /* customButton component 분리로 style로 따로 적용 */
-.buttons button {
+/* .buttons button {
   border: none;
   border-radius: 15px;
   background-color: #ae8fb6;
@@ -40,7 +40,7 @@
   letter-spacing: 2px;
 
   cursor: pointer;
-}
+} */
 
 .buttons button:hover {
   background-color: #e0bfe8;
