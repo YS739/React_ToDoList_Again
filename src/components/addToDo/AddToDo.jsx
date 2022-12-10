@@ -35,7 +35,7 @@ const AddToDo = ({
           onChange={onChangeHandler}
         />
       </div>
-      <CustomButton color="red" onClick={onAddToDoHandler}>
+      <CustomButton btnName="add" onClick={onAddToDoHandler}>
         추가하기
       </CustomButton>
     </div>
