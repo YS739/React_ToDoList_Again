@@ -41,10 +41,7 @@ const CustomButton = (props) => {
     //삭제하기 버튼
     case "delete": {
       return (
-        <button
-          style={(btnStyle, { background: "pink", color: "black" })}
-          onClick={props.onClick}
-        >
+        <button style={btnStyle} onClick={props.onClick}>
           {props.children}
         </button>
       );
@@ -57,6 +54,9 @@ const CustomButton = (props) => {
           {props.children}
         </button>
       );
+    }
+    default: {
+      return <button onClick={props.onClick}>{props.children}</button>;
     }
   }
 };
