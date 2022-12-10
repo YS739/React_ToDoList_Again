@@ -1,6 +1,7 @@
 import "./style.css";
+import CustomButton from "../customButton/CustomButton";
 
-function ToDoCards({ toDo, deleteToDo, switchList, className }) {
+function ToDoCards({ toDo, deleteToDo, switchList }) {
   return (
     <div className="list-box">
       <div className="content-text">
@@ -8,7 +9,9 @@ function ToDoCards({ toDo, deleteToDo, switchList, className }) {
         <h4>{toDo.content}</h4>
       </div>
       <div className="buttons">
-        <button onClick={() => deleteToDo(toDo.id)}>삭제하기</button>
+        <CustomButton btnName="delete" onClick={() => deleteToDo(toDo.id)}>
+          삭제하기
+        </CustomButton>
         <button onClick={() => switchList(toDo.id)}>
           {toDo.isDone ? "취소" : "완료"}
         </button>

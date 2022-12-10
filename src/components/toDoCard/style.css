@@ -27,6 +27,7 @@
   align-items: center;
 }
 
+/* customButton component 분리로 style로 따로 적용 */
 .buttons button {
   border: none;
   border-radius: 15px;
