@@ -1,4 +1,19 @@
 const CustomButton = (props) => {
+  // 삭제, 완료, 취소 버튼 중복되는 style
+  const btnStyle = {
+    background: "purple",
+    border: "none",
+    borderRadius: "15px",
+    margin: "0 6px",
+    padding: "5px 7px",
+
+    fontSize: "12px",
+    fontWeight: "900",
+    letterSpacing: "2px",
+
+    cursor: "pointer",
+  };
+
   switch (props.btnName) {
     // 추가하기 버튼
     case "add": {
@@ -27,22 +42,7 @@ const CustomButton = (props) => {
     //삭제하기 버튼
     case "delete": {
       return (
-        <button
-          style={{
-            background: "purple",
-            border: "none",
-            borderRadius: "15px",
-            margin: "0 6px",
-            padding: "5px 7px",
-
-            fontSize: "12px",
-            fontWeight: "900",
-            letterSpacing: "2px",
-
-            cursor: "pointer",
-          }}
-          onClick={props.onClick}
-        >
+        <button style={btnStyle} onClick={props.onClick}>
           {props.children}
         </button>
       );
@@ -51,22 +51,7 @@ const CustomButton = (props) => {
     // 완료, 취소 버튼
     case "switch": {
       return (
-        <button
-          style={{
-            background: "purple",
-            border: "none",
-            borderRadius: "15px",
-            margin: "0 6px",
-            padding: "5px 7px",
-
-            fontSize: "12px",
-            fontWeight: "900",
-            letterSpacing: "2px",
-
-            cursor: "pointer",
-          }}
-          onClick={props.onClick}
-        >
+        <button style={btnStyle} onClick={props.onClick}>
           {props.children}
         </button>
       );
