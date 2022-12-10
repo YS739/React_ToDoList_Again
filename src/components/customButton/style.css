@@ -1,0 +1,7 @@
+button:hover {
+  /* background-color: #ae8fb6; */
+  color: #9775fa;
+  transition: 0.4s;
+
+  box-shadow: 0 0 2px 1px #b197fc;
+}

@@ -1,5 +1,5 @@
 .list-box {
-  width: 230px;
+  width: 250px;
   height: 160px;
 
   display: flex;
@@ -10,7 +10,7 @@
   margin-bottom: 20px;
 
   background-color: white;
-  box-shadow: 1px 1px 2px 2px #e0bfe8;
+  box-shadow: 1px 1px 2px 3px #e5dbff;
 
   border: 2px solid #e0bfe8;
   border-radius: 20px;

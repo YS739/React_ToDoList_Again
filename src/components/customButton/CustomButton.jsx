@@ -1,3 +1,5 @@
+import "./style.css";
+
 const CustomButton = (props) => {
   // 추가하기 버튼 style
   const addBtnStyle = {
