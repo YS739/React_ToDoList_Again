@@ -48,7 +48,9 @@
   border-radius: 20px;
   padding: 10px 15px;
   color: black;
-  font-weight: 800;
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: 2px;
 
   cursor: pointer;
 }

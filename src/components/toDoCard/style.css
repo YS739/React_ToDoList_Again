@@ -30,15 +30,19 @@
 .buttons button {
   border: none;
   border-radius: 15px;
-  background-color: #e0bfe8;
+  background-color: #ae8fb6;
   margin: 0 6px;
   padding: 5px 7px;
+
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 2px;
 
   cursor: pointer;
 }
 
 .buttons button:hover {
-  background-color: #ae8fb6;
+  background-color: #e0bfe8;
   color: white;
   transition: 0.5s;
 }
