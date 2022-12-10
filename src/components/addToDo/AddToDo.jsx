@@ -1,4 +1,5 @@
 import "./style.css";
+import CustomButton from "../customButton/CustomButton";
 
 const AddToDo = ({
   title,
@@ -34,9 +35,9 @@ const AddToDo = ({
           onChange={onChangeHandler}
         />
       </div>
-      <button className="add-btn" onClick={onAddToDoHandler}>
+      <CustomButton color="red" onClick={onAddToDoHandler}>
         추가하기
-      </button>
+      </CustomButton>
     </div>
   );
 };
