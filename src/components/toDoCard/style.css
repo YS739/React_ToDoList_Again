@@ -42,8 +42,8 @@
   cursor: pointer;
 } */
 
-.buttons button:hover {
-  background-color: #e0bfe8;
+/* .buttons button:hover {
+  background: #d6336c;
   color: white;
   transition: 0.5s;
-}
+} */

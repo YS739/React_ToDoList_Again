@@ -23,19 +23,25 @@
   padding: 10px;
   margin: 0 10px;
 
-  border: transparent;
+  border: none;
   border-radius: 20px;
 
-  font-weight: 800;
+  font-weight: 900;
+  font-size: 15px;
+  color: #b197fc;
+}
+
+.input-box input:focus-visible {
+  outline: none;
 }
 
 .input-box input:hover {
-  background-color: #ae8fb6;
+  background-color: #f3f0ff;
 }
 
 .input-box input:focus {
-  background-color: #ae8fb6;
-  color: white;
+  background-color: #f3f0ff;
+  color: #b197fc;
 }
 
 .input-text {
@@ -54,10 +60,12 @@
   letter-spacing: 2px;
 
   cursor: pointer;
-}
+}*/
 
-.add-btn:hover {
+button:hover {
   background-color: #ae8fb6;
-  color: white;
+  color: purple;
   transition: 0.5s;
-} */
+
+  box-shadow: 0 0 2px 2px red;
+}
