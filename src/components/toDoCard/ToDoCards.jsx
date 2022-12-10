@@ -9,12 +9,14 @@ function ToDoCards({ toDo, deleteToDo, switchList }) {
         <h4>{toDo.content}</h4>
       </div>
       <div className="buttons">
+        {/* 삭제하기 버튼 */}
         <CustomButton btnName="delete" onClick={() => deleteToDo(toDo.id)}>
           삭제하기
         </CustomButton>
-        <CustomButton btnName="switch" onClick={() => switchList(toDo.id)}>
-          {toDo.isDone ? "취소" : "완료"}
-        </CustomButton>
+        <CustomButton
+          btnName="switch"
+          onClick={() => switchList(toDo.id)}
+        ></CustomButton>
       </div>
     </div>
   );
