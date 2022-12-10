@@ -1,7 +1,6 @@
 const CustomButton = (props) => {
   // 삭제, 완료, 취소 버튼 중복되는 style
   const btnStyle = {
-    background: "purple",
     border: "none",
     borderRadius: "15px",
     margin: "0 6px",
@@ -42,7 +41,10 @@ const CustomButton = (props) => {
     //삭제하기 버튼
     case "delete": {
       return (
-        <button style={btnStyle} onClick={props.onClick}>
+        <button
+          style={(btnStyle, { background: "pink", color: "black" })}
+          onClick={props.onClick}
+        >
           {props.children}
         </button>
       );
