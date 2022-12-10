@@ -51,7 +51,7 @@ const CustomButton = (props) => {
     case "switch": {
       return (
         <button style={btnStyle} onClick={props.onClick}>
-          {props.toDo.isDone ? "취소" : "완료"}
+          {props.children}
         </button>
       );
     }
