@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import Header from "./components/header/Header";
-import AddToDo from "./components/addToDo/AddToDo";
-import ToDoBox from "./components/todoBox/ToDoBox";
+import Header from "../components/header/Header";
+import AddToDo from "../components/addToDo/AddToDo";
+import ToDoBox from "../components/todoBox/ToDoBox";
 
-const App = () => {
+const ToDoList = () => {
   const [toDoS, setToDoS] = useState([
     { id: 0, title: "리액트", content: "리액트 과제 다시 하기", isDone: false },
     { id: 1, title: "독서", content: "IT책 10장 읽기", isDone: true },
@@ -98,4 +98,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default ToDoList;
