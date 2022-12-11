@@ -2,7 +2,9 @@
 
 ## 내일배움캠프 4기 React basic course homework
 
-## Tech stack <img alt="React" src="https://img.shields.io/badge/-React-45b8d8?style=flat-square&logo=react&logoColor=white" />
+## Tech stack
+
+<img alt="React" src="https://img.shields.io/badge/-React-45b8d8?style=flat-square&logo=react&logoColor=white" />
 
 ## Compare homework
 
