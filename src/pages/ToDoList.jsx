@@ -15,7 +15,7 @@ const ToDoList = () => {
   // 추가하기 버튼을 누르면 새로운 ToDo가 추가
   const onAddToDoHandler = (e) => {
     // 제목과 내용이 모두 입력되었을 때
-    if (title !== "" && content !== "") {
+    if (title && content) {
       e.preventDefault();
       const newToDoS = {
         id: toDoS.length + 1,
@@ -30,21 +30,21 @@ const ToDoList = () => {
     }
 
     // 제목과 내용이 모두 비었을 때 - 제목에 focus
-    else if (title === "" && content === "") {
+    else if (!title && !content) {
       e.preventDefault();
       document.querySelector("#title").focus();
       alert("제목과 내용을 입력해주세요");
     }
 
     // 제목이 비었을 때 - 내용에 focus
-    else if (title === "") {
+    else if (!title) {
       e.preventDefault();
       document.getElementById("title").focus();
       alert("제목을 입력해주세요");
     }
 
     // 내용이 비었을 때  - 제목에 focus
-    else if (content === "") {
+    else if (!content) {
       e.preventDefault();
       document.getElementById("content").focus();
       alert("내용을 입력해주세요");
