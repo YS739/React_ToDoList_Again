@@ -1,9 +1,8 @@
 # React - ToDo List
 
-## 내일배움캠프 4기 Basic course homework
+## 내일배움캠프 4기 React basic course homework
 
-## Tech stack
-<img alt="React" src="https://img.shields.io/badge/-React-45b8d8?style=flat-square&logo=react&logoColor=white" />
+## Tech stack <img alt="React" src="https://img.shields.io/badge/-React-45b8d8?style=flat-square&logo=react&logoColor=white" />
 
 ## Compare homework
 ### 👉 [submit homework](https://react-todo-list-omega-three.vercel.app/) (12.05~12.07)
@@ -16,5 +15,4 @@
 **3. Delete Todo**
 **4. Switch Todo Status(Done ↔ Working)**
 
-## Folder structure
-![todo_folder](https://user-images.githubusercontent.com/112805225/206894738-cc42e728-4079-462c-a993-b1f5ede4f22f.jpg)
+## Folder structure ![todo_folder](https://user-images.githubusercontent.com/112805225/206894738-cc42e728-4079-462c-a993-b1f5ede4f22f.jpg)
