@@ -4,9 +4,12 @@
   display: flex;
   flex-direction: row;
   justify-content: left;
-  align-items: center;
+  align-items: top;
 
   margin-left: 20px;
 
   flex-wrap: wrap;
+
+  height: 350px;
+  overflow-y: scroll;
 }
