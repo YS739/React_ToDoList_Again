@@ -83,17 +83,24 @@ const ToDoList = () => {
         content={content}
         setContent={setContent}
         onAddToDoHandler={onAddToDoHandler}
-      ></AddToDo>
+      />
 
-      {/* 추가한 ToDoList(Working, Done) */}
+      {/* isDone을 false, true로 나눠서 toDoBox에서 받아올 때 isDone에 따라 보여주기 */}
+      <h2>Working...🔥🔥🔥</h2>
       <ToDoBox
         toDoS={toDoS}
         deleteToDo={deleteToDo}
         switchList={switchList}
-        content={content}
-        title={title}
-        isDone={toDoS.isDone}
-      ></ToDoBox>
+        isDone={false}
+      />
+
+      <h2>Done 🎉🎉🎉</h2>
+      <ToDoBox
+        toDoS={toDoS}
+        deleteToDo={deleteToDo}
+        switchList={switchList}
+        isDone={true}
+      />
     </div>
   );
 };
