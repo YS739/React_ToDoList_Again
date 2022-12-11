@@ -9,6 +9,7 @@ const AddToDo = ({
   onAddToDoHandler,
 }) => {
   const onChangeHandler = (e) => {
+    // input(제목, 내용)에 입력된 값 받기
     if (e.target.id === "title") {
       setTitle(e.target.value);
     } else if (e.target.id === "content") {

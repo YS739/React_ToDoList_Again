@@ -7,10 +7,10 @@ function ToDoBox({ toDoS, deleteToDo, switchList }) {
       <h2>Working...🔥🔥🔥</h2>
       <div className="list-container">
         {toDoS.map((toDo) => {
+          // 'false'인 것만 working에
           if (toDo.isDone === false) {
             return (
-              // 추가한 ToDo들
-
+              // ToDo들
               <ToDoCards
                 toDo={toDo}
                 key={toDo.id}
@@ -25,6 +25,7 @@ function ToDoBox({ toDoS, deleteToDo, switchList }) {
       <h2>Done 🎉🎉🎉</h2>
       <div className="list-container">
         {toDoS.map((toDo) => {
+          // 'true'인 것만 working에
           if (toDo.isDone === true) {
             return (
               <ToDoCards
